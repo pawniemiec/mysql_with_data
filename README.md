@@ -1,15 +1,15 @@
 # MySQL with data
 MySQL with data
 
-## Requirements
-It requires the following apps installed:
+## Prerequisites
+`mysql_with_data` is dependent on the following libs and programs:
 - docker
 - docker-compose
 - make
 - mysql client
 
 ## Samle data
-All credit goes to 
+All credit goes to:
 `Giuseppe Maxia`
 http://datacharmer.blogspot.com
 
