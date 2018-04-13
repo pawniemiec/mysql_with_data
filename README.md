@@ -8,6 +8,14 @@ It requires the following apps installed:
 - make
 - mysql client
 
+## Samle data
+All credit goes to 
+`Giuseppe Maxia`
+http://datacharmer.blogspot.com
+
+### Data forked from:
+https://github.com/datacharmer/test_db
+
 ## Make file
 | CMD             | ACTION                                                     |
 |-----------------|------------------------------------------------------------|
