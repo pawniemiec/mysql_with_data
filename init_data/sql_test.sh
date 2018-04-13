@@ -26,6 +26,7 @@ salaries:2844047:4273816835
 titles:443308:1842528371
 )
 
+echo -e "\nExpected results:"
 for E in ${EXPECTED[*]}
 do
     echo $E
@@ -54,7 +55,7 @@ function get_expected
 }
 
 
-echo $($MYSQL -BN -e 'show tables from employees')
+echo -e "\nAcctual results:"
 printf "%-21s %-10s     %-15s \n" table count crc
 echo '--------------------- ----------     ---------------'
 for T in $($MYSQL -BN -e 'show tables from employees') 
