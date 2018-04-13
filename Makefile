@@ -21,6 +21,7 @@ run: ## runs mysql server (if you want data run `make build` first
 	echo "Msql up and running"
 
 data_load: ## starts mysql, loads data and stops mysql
+	mkdir data
 	docker-compose up -d
 	sleep 10
 	mysql -h 127.0.0.1 -uroot -ppaweltest -e "CREATE USER 'test'@'%' IDENTIFIED BY 'pass';"
@@ -34,7 +35,7 @@ test: ## run tests
 
 clear: ## stops mysql and clears data
 	docker-compose down
-	sudo rm -rf data/*
+	sudo rm -rf data
 
 define dockerexec # custom function to execute commands inside the 'app' container
 	@echo "executing '$1' inside container ..."
