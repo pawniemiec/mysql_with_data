@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 MYSQL=$1
 
 if [ -z "$MYSQL" ]
