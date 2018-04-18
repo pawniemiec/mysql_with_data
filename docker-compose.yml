@@ -1,12 +1,15 @@
-mysql:
-  container_name: mysql_with_data
-  restart: always
-  image: mysql:latest
-  environment:
-    MYSQL_ROOT_PASSWORD: 'paweltest' # TODO: Change this
-    MYSQL_USER: 'test'
-    MYSQL_PASS: 'pass'
-  volumes:
-    - ./data:/var/lib/mysql
-  ports:
-    - 3306:3306
+version: '2'
+services:
+    mysql:
+        container_name: mysql_with_data
+        restart: always
+        image: mysql:latest
+        network_mode: bridge
+        environment:
+            MYSQL_ROOT_PASSWORD: 'paweltest' # TODO: Change this
+            MYSQL_USER: 'test'
+            MYSQL_PASS: 'pass'
+        volumes:
+            - ./data:/var/lib/mysql
+        ports:
+            - 3306:3306
